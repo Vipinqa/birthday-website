@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, Neha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="night-sky" aria-hidden="true"></div>
+    <div class="background-glow background-glow-one"></div>
+    <div class="background-glow background-glow-two"></div>
+
+    <!-- Decorative floating elements created by JavaScript -->
+    <div class="floating-decor" id="floatingDecor" aria-hidden="true"></div>
+    <div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
+
+    <header class="hero">
+      <nav class="top-bar">
+        <div class="brand">For My Love</div>
+        <div class="music-panel glass-card">
+          <button class="music-button" id="musicToggle" type="button" aria-pressed="false">
+            Play Music 🎵
+          </button>
+          <label class="volume-wrap" for="volumeControl">
+            <span>Volume</span>
+            <input
+              id="volumeControl"
+              class="volume-control"
+              type="range"
+              min="0"
+              max="1"
+              step="0.05"
+              value="0.6"
+            />
+          </label>
+          <p class="music-status" id="musicStatus">A soft song for Neha is waiting.</p>
+        </div>
+      </nav>
+
+      <section class="hero-content glass-card">
+        <p class="hero-tag">A little world made just for Neha</p>
+        <h1>Happy Birthday, Neha ❤️</h1>
+        <p class="hero-subtitle">
+          Today is all about you, Neha, and I’m so lucky to have you in my life.
+        </p>
+        <div class="typing-wrapper">
+          <span class="typing-prefix">My heart says:</span>
+          <span class="typing-text" id="typingText" aria-live="polite"></span>
+        </div>
+        <div class="hero-actions">
+          <a class="primary-button" href="#message">Read My Wish</a>
+          <a class="secondary-button" href="#birthStory">Open the Magic</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="countdown-section section-shell" id="countdown">
+        <div class="section-heading">
+          <span class="eyebrow">Countdown To Neha's Day</span>
+          <h2>Waiting for her special day feels beautiful too</h2>
+          <p>
+            A little timer for the next time the calendar turns into 20 July for Neha.
+          </p>
+        </div>
+
+        <div class="countdown-card glass-card">
+          <p class="countdown-intro">
+            Every passing day brings us closer to celebrating Neha all over again.
+          </p>
+          <div class="countdown-grid" aria-live="polite">
+            <article class="countdown-item">
+              <span class="countdown-value" id="daysValue">00</span>
+              <span class="countdown-label">Days</span>
+            </article>
+            <article class="countdown-item">
+              <span class="countdown-value" id="hoursValue">00</span>
+              <span class="countdown-label">Hours</span>
+            </article>
+            <article class="countdown-item">
+              <span class="countdown-value" id="minutesValue">00</span>
+              <span class="countdown-label">Minutes</span>
+            </article>
+            <article class="countdown-item">
+              <span class="countdown-value" id="secondsValue">00</span>
+              <span class="countdown-label">Seconds</span>
+            </article>
+          </div>
+          <p class="countdown-note" id="countdownNote">
+            Counting down to the next birthday sunrise for Neha. ✨
+          </p>
+        </div>
+      </section>
+
+      <section class="name-section section-shell">
+        <div class="name-card glass-card">
+          <p class="name-label">The name that lights up my world</p>
+          <h2 class="glowing-name">NEHA ✨</h2>
+          <p class="name-message">
+            Neha, you are the most beautiful part of my life. Every moment with you
+            feels magical, and your smile makes my world complete.
+          </p>
+        </div>
+      </section>
+
+      <section class="birth-story section-shell" id="birthStory">
+        <div class="section-heading">
+          <span class="eyebrow">The Day You Came Into This World ✨</span>
+          <h2>A beautiful moment written in time</h2>
+          <p>
+            On Saturday, 20 July 2002, at 10:24 AM, the world became more beautiful
+            because you were born.
+          </p>
+        </div>
+
+        <div class="timeline-card glass-card">
+          <div class="timeline-intro">
+            <div class="clock-icon" aria-hidden="true">
+              <div class="clock-face">
+                <span class="clock-hand hour-hand"></span>
+                <span class="clock-hand minute-hand"></span>
+                <span class="clock-center"></span>
+              </div>
+            </div>
+            <div>
+              <h3>The Day You Came Into This World ✨</h3>
+              <p>
+                That moment became special forever, because it brought you into this
+                world.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-grid">
+            <article class="timeline-item">
+              <span class="timeline-label">Date</span>
+              <strong>20 July 2002</strong>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-label">Day</span>
+              <strong>Saturday</strong>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-label">Time</span>
+              <strong>10:24 AM</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slideshow-section section-shell" id="slideshow">
+        <div class="section-heading">
+          <span class="eyebrow">A Love Story In Frames</span>
+          <h2>Neha in photos and moving memories</h2>
+          <p>
+            Every special image and video now lives here, together in one beautiful
+            love-story carousel.
+          </p>
+        </div>
+
+        <div class="slideshow-card glass-card">
+          <div class="slideshow-shell">
+            <button class="slide-arrow slide-prev" id="slidePrev" type="button" aria-label="Previous slide">
+              ‹
+            </button>
+
+            <div class="slides-viewport">
+              <div class="slides-track" id="slidesTrack">
+                <article class="slide-item">
+                  <div class="slide-media-shell slide-media-shell-portrait">
+                    <video class="slide-media slide-media-portrait" autoplay muted loop playsinline preload="metadata">
+                      <source
+                        src="images/WhatsApp Video 2026-05-11 at 11.07.41 AM.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div class="slide-copy">
+                    <span class="slide-tag">Video Memory</span>
+                    <h3>Neha's Smile</h3>
+                    <p>Your smile makes my world complete in the softest way.</p>
+                  </div>
+                </article>
+
+                <article class="slide-item">
+                  <div class="slide-media-shell">
+                    <video class="slide-media" autoplay muted loop playsinline preload="metadata">
+                      <source
+                        src="images/WhatsApp Video 2026-05-11 at 11.40.16 AM.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div class="slide-copy">
+                    <span class="slide-tag">Golden Moment</span>
+                    <h3>Golden Memories</h3>
+                    <p>Every moment with you feels magical, warm, and unforgettable.</p>
+                  </div>
+                </article>
+
+                <article class="slide-item">
+                  <img
+                  src="images/WhatsApp Image 2026-05-11 at 11.11.38 AM.jpeg"
+                  alt="Neha in a lovely portrait"
+                  />
+                  <div class="slide-copy">
+                    <span class="slide-tag">Photo Memory</span>
+                    <h3>My Happy Place</h3>
+                    <p>Neha, being with you turns ordinary moments into beautiful memories.</p>
+                  </div>
+                </article>
+
+                <article class="slide-item">
+                  <img
+                  src="images/WhatsApp Image 2026-05-11 at 11.11.37 AM.jpeg"
+                  alt="A lovely memory full of warmth"
+                  />
+                  <div class="slide-copy">
+                    <span class="slide-tag">Forever Frame</span>
+                    <h3>Forever Us</h3>
+                    <p>Every picture of you feels like a memory I want to keep forever.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <button class="slide-arrow slide-next" id="slideNext" type="button" aria-label="Next slide">
+              ›
+            </button>
+          </div>
+
+          <div class="slide-dots" id="slideDots" aria-label="Slideshow navigation"></div>
+        </div>
+      </section>
+
+      <section class="message-section section-shell" id="message">
+        <div class="section-heading">
+          <span class="eyebrow">Birthday Letter</span>
+          <h2>A wish written just for you</h2>
+        </div>
+
+        <article class="message-card glass-card">
+          <!-- You can edit this full message and personalize it even more -->
+          <p>
+            Neha, on your birthday, I just want to remind you how incredibly special
+            you are to me. You make my world brighter in ways words can barely explain.
+            Your smile is my favorite place, your kindness is my comfort, and your heart
+            is one of the most beautiful things I’ve ever known.
+          </p>
+          <p>
+            Thank you for being you, for bringing warmth into my days, and for making
+            life feel softer, sweeter, and more meaningful. I hope this birthday brings
+            you endless happiness, peaceful moments, beautiful surprises, and all the
+            love that your heart deserves.
+          </p>
+          <p>
+            Neha, you deserve to be celebrated today and every day, because you are truly
+            precious. I hope this new year of your life is filled with laughter, growth,
+            little miracles, and dreams coming true. No matter what, I’ll always be
+            cheering for you with all my heart.
+          </p>
+          <p class="message-signoff">
+            Happy Birthday once again, Neha. You are, and always will be, the most
+            beautiful part of my life. ❤️
+          </p>
+        </article>
+      </section>
+
+      <section class="question-section section-shell">
+        <div class="section-heading">
+          <span class="eyebrow">A Tiny Promise</span>
+          <h2>Will you always keep smiling for me?</h2>
+        </div>
+
+        <div class="question-card glass-card">
+          <div class="question-actions" id="questionZone">
+            <button class="primary-button" id="yesButton" type="button">Yes ❤️</button>
+            <button class="no-button" id="noButton" type="button">No 😅</button>
+          </div>
+          <p class="question-response" id="questionResponse" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="surprise-section section-shell" id="surprise">
+        <div class="section-heading">
+          <span class="eyebrow">One More Thing</span>
+          <h2>A little surprise for the birthday girl</h2>
+        </div>
+
+        <div class="surprise-card glass-card">
+          <button class="primary-button surprise-button" id="surpriseButton" type="button">
+            Open Your Surprise 🎁
+          </button>
+
+          <div class="surprise-reveal hidden" id="surpriseReveal">
+            <div class="heart-burst" id="heartBurst" aria-hidden="true"></div>
+            <h3>You are deeply loved</h3>
+            <p>
+              Neha, if I could wrap every warm feeling, every grateful thought, and every
+              heartbeat full of love into one gift, it would still not be enough to show
+              how much you mean to me. I hope today surrounds you with joy, sweetness,
+              and the kind of love that stays with you long after the candles are out.
+            </p>
+            <p class="final-promise">
+              No matter how many birthdays pass, I hope you always feel cherished,
+              protected, celebrated, and loved exactly the way your heart deserves.
+            </p>
+            <p class="final-signature">Forever yours, with all my love, always. ❤️</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Made with love, just for you ❤️</p>
+    </footer>
+
+    <!-- Audio file added for the birthday music control -->
+    <audio
+      id="bgMusic"
+      src="audio/Yaen Endral Video Song  Idharkuthaane Aasaipattai Balakumara  Ashwin, Swathi.mp3"
+      loop
+      preload="auto"
+    ></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
