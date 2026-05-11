@@ -16,6 +16,10 @@ const daysValue = document.getElementById("daysValue");
 const hoursValue = document.getElementById("hoursValue");
 const minutesValue = document.getElementById("minutesValue");
 const secondsValue = document.getElementById("secondsValue");
+const countdownEyebrow = document.getElementById("countdownEyebrow");
+const countdownHeading = document.getElementById("countdownHeading");
+const countdownDescription = document.getElementById("countdownDescription");
+const countdownIntro = document.getElementById("countdownIntro");
 const countdownNote = document.getElementById("countdownNote");
 const slidePrev = document.getElementById("slidePrev");
 const slideNext = document.getElementById("slideNext");
@@ -215,21 +219,60 @@ function formatCountdownUnit(value) {
   return String(value).padStart(2, "0");
 }
 
+function isBirthdayToday(now = new Date()) {
+  return now.getMonth() === birthdayMonthIndex && now.getDate() === birthdayDay;
+}
+
 function updateBirthdayCountdown() {
-  if (!daysValue || !hoursValue || !minutesValue || !secondsValue || !countdownNote) {
+  if (
+    !daysValue ||
+    !hoursValue ||
+    !minutesValue ||
+    !secondsValue ||
+    !countdownNote ||
+    !countdownEyebrow ||
+    !countdownHeading ||
+    !countdownDescription ||
+    !countdownIntro
+  ) {
     return;
   }
 
   const now = new Date();
+  const birthdayToday = isBirthdayToday(now);
   const targetDate = getNextBirthdayDate(now);
   const timeLeft = targetDate.getTime() - now.getTime();
+
+  if (birthdayToday) {
+    countdownEyebrow.textContent = "It's Neha's Birthday ❤️";
+    countdownHeading.textContent = "Today is the day the world got Neha";
+    countdownDescription.textContent =
+      "20 July is finally here, the sweetest day of the year.";
+    countdownIntro.textContent =
+      "This is not a countdown anymore, this is a celebration of Neha. Happy Birthday Ammu ❤️";
+    daysValue.textContent = "00";
+    hoursValue.textContent = "00";
+    minutesValue.textContent = "00";
+    secondsValue.textContent = "00";
+    countdownNote.textContent =
+      "It's Neha's birthday today. Celebrate her with all your heart! ❤️";
+    return;
+  }
+
+  countdownEyebrow.textContent = "Countdown To Neha's Day";
+  countdownHeading.textContent = "Waiting for her special day feels beautiful too";
+  countdownDescription.textContent =
+    "A little timer for the next time the calendar turns into 20 July for Neha.";
+  countdownIntro.textContent =
+    "Every passing day brings us closer to celebrating Neha all over again.";
 
   if (timeLeft <= 0) {
     daysValue.textContent = "00";
     hoursValue.textContent = "00";
     minutesValue.textContent = "00";
     secondsValue.textContent = "00";
-    countdownNote.textContent = "It's Neha's birthday today. Celebrate her with all your heart! ❤️";
+    countdownNote.textContent =
+      "Another birthday chapter will come, and Neha will be celebrated all over again. ✨";
     return;
   }
 
